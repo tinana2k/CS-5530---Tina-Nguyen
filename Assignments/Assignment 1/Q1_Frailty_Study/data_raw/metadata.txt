@@ -1,0 +1,46 @@
+# METADATA FOR Frailty Study Dataset
+
+## 1. Dataset Description
+
+This dataset contains information from a study on physical frailty from 10 female participants.
+It includes various physical measurements for each participant such as height, weight, age,
+and grip strength. Frailty is defined as reduced physical strength and health condition.
+
+Grip strength is commonly used as an indicator of frailty because lower grip strength
+is often associated with higher frailty risk.
+
+---
+
+## 2. Source Information
+
+Original File Name: Frailty_Study.csv  
+Folder Location: data_raw/  
+Format: Comma-Separated Values (CSV)  
+
+---
+
+## 3. Column Descriptions
+
+Height
+- Description: Participant height
+- Type: Numerical
+- Units: Inches
+
+Weight
+- Description: Participant body weight
+- Type: Numerical
+- Units: Pounds
+
+Age
+- Description: Participant age
+- Type: Numerical
+- Units: Years
+
+Grip_Strength
+- Description: Hand grip strength measurement
+- Type: Numerical
+- Units: Kilograms (kg)
+
+Frailty
+- Description: Frailty status indicator
+- Values: Y = Frail, N = Not Frail
