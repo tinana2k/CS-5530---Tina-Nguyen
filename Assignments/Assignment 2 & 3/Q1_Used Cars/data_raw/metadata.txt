@@ -1,0 +1,121 @@
+# METADATA FOR USED CARS DATASET (Q1)
+
+## 1. DATASET DESCRIPTION
+
+This dataset contains information about used car listings. Each row represents a single used car, and each column represents a specific attribute of that car. The goal of this dataset is to analyze factors affecting the price of used cars.
+
+The target variable is "Price", which represents the selling price of the used car in lakhs.
+
+The dataset includes both numerical and categorical features such as car specifications, usage, and location.
+
+---
+
+## 2. SOURCE INFORMATION
+
+- **Original File Name:** train.csv
+- **Source:** Provided by instructor (Assignment 2 - Q1)
+- **Data Link:** https://app.box.com/s/jm6pw202asu4xd3uypwtry2rqk691y1i
+- **File Format:** CSV (Comma-Separated Values)
+
+---
+
+## 3. DATASET STRUCTURE
+
+- **Type:** Tabular dataset
+- **Rows:** Each row represents one used car listing
+- **Columns:** 14 columns
+- **Target Variable:** Price (in lakhs)
+
+---
+
+## 4. COLUMN DESCRIPTIONS
+
+1. **Unnamed: 0**
+   - Description: Index column (row identifier)
+   - Data Type: Integer
+   - Note: Can be dropped during preprocessing
+
+2. **Name**
+   - Description: Brand and model of the car
+   - Data Type: Text (Categorical)
+
+3. **Location**
+   - Description: City where the car is being sold
+   - Data Type: Text (Categorical)
+
+4. **Year**
+   - Description: Year of manufacture
+   - Data Type: Integer (Numerical)
+
+5. **Kilometers_Driven**
+   - Description: Total kilometers driven
+   - Data Type: Integer (Numerical)
+
+6. **Fuel_Type**
+   - Description: Type of fuel used (Petrol, Diesel, etc.)
+   - Data Type: Text (Categorical)
+
+7. **Transmission**
+   - Description: Transmission type (Manual or Automatic)
+   - Data Type: Text (Categorical)
+
+8. **Owner_Type**
+   - Description: Ownership history (First, Second, etc.)
+   - Data Type: Text (Categorical)
+
+9. **Mileage**
+   - Description: Fuel efficiency (contains units like "kmpl")
+   - Data Type: Text → Converted to Float after cleaning
+
+10. **Engine**
+    - Description: Engine capacity (contains units like "CC")
+    - Data Type: Text → Converted to Float after cleaning
+
+11. **Power**
+    - Description: Engine power (contains units like "bhp")
+    - Data Type: Text → Converted to Float after cleaning
+
+12. **Seats**
+    - Description: Number of seats
+    - Data Type: Float / Integer (Numerical)
+
+13. **New_Price**
+    - Description: Original price of the car when new (contains "Lakh")
+    - Data Type: Text → Converted to Float after cleaning
+
+14. **Price**
+    - Description: Selling price of the used car (target variable)
+    - Data Type: Float (Numerical)
+
+---
+
+## 5. DATA CLEANING NOTES
+
+- The column "Unnamed: 0" is an index column and can be removed.
+- Missing values were handled using:
+  - Median for numerical columns
+  - Mode for categorical columns
+- Units such as "kmpl", "CC", "bhp", and "Lakh" were removed and converted into numeric values.
+- Categorical variables "Fuel_Type" and "Transmission" were converted into one-hot encoded variables.
+- A new feature "Car_Age" was created using:
+  
+  Car_Age = Current Year - Year
+
+---
+
+## 6. USAGE
+
+This dataset is used for:
+- Data preprocessing and cleaning
+- Feature engineering
+- Exploratory data analysis
+- Statistical operations (groupby, summarize)
+- Preparing data for machine learning models
+
+---
+
+## 7. NOTES
+
+- Column names must be checked before processing using df.columns
+- Some values in "Power" may contain non-numeric entries (e.g., 'null') and need cleaning
+- Always convert columns to correct data types before analysis
