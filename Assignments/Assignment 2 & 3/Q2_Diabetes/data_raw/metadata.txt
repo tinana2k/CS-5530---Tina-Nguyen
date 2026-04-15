@@ -1,0 +1,128 @@
+# METADATA FOR DIABETES DATASET (Q2)
+
+## 1. DATASET DESCRIPTION
+
+This dataset contains diagnostic medical information collected from 768 patients. Each row represents an individual patient, and each column represents a medical attribute used to assess the likelihood of diabetes.
+
+The dataset includes several health-related variables such as glucose level, blood pressure, BMI, and age. The main goal of this dataset is to determine whether a patient has diabetes.
+
+The response variable is "Outcome", which is binary:
+- 1 → Patient has diabetes
+- 0 → Patient does not have diabetes
+
+For this assignment, the dataset is treated as the full population for statistical sampling and analysis.
+
+---
+
+## 2. SOURCE INFORMATION
+
+- **Original File Name:** diabetes.csv
+- **Source:** Provided by instructor (Assignment 2 - Q2)
+- **Data Link:** https://app.box.com/s/7qv44umhw0vnzgmoe9krfkfkv5kf2atv
+- **Format:** Comma-Separated Values (CSV)
+
+---
+
+## 3. DATASET STRUCTURE
+
+- **Type:** Tabular dataset
+- **Rows:** 768 observations (patients)
+- **Columns:** 9 attributes
+- **Response Variable:** Outcome (binary classification)
+
+---
+
+## 4. COLUMN DESCRIPTIONS
+
+1. **Pregnancies**
+   - Description: Number of times the patient has been pregnant
+   - Data Type: Integer (Numerical)
+
+2. **Glucose**
+   - Description: Plasma glucose concentration after a 2-hour oral glucose tolerance test
+   - Data Type: Integer (Numerical)
+   - Units: mg/dL
+
+3. **BloodPressure**
+   - Description: Diastolic blood pressure
+   - Data Type: Integer (Numerical)
+   - Units: mm Hg
+
+4. **SkinThickness**
+   - Description: Triceps skin fold thickness
+   - Data Type: Integer (Numerical)
+   - Units: mm
+
+5. **Insulin**
+   - Description: 2-hour serum insulin level
+   - Data Type: Integer (Numerical)
+   - Units: µU/ml
+
+6. **BMI**
+   - Description: Body Mass Index
+   - Data Type: Float (Numerical)
+   - Units: kg/m²
+
+7. **DiabetesPedigreeFunction**
+   - Description: A function that represents the genetic likelihood of diabetes
+   - Data Type: Float (Numerical)
+
+8. **Age**
+   - Description: Age of the patient
+   - Data Type: Integer (Numerical)
+   - Units: Years
+
+9. **Outcome**
+   - Description: Diabetes diagnosis result
+   - Data Type: Integer (Binary)
+   - Values:
+     - 1 = Has diabetes
+     - 0 = Does not have diabetes
+
+---
+
+## 5. DATA USAGE IN THIS ASSIGNMENT
+
+The dataset is used as a population to perform statistical sampling and comparison.
+
+### Part (a)
+- A random sample of 25 observations is taken using a fixed seed
+- Mean and maximum values of Glucose are calculated
+- These statistics are compared with population values
+- Results are visualized using charts
+
+### Part (b)
+- The 98th percentile of BMI is calculated for both:
+  - the sample
+  - the population
+- Results are compared and visualized
+
+### Part (c)
+- Bootstrap sampling is applied:
+  - 500 samples
+  - Each sample contains 150 observations
+  - Sampling is performed with replacement
+- For each sample, the following statistics of BloodPressure are computed:
+  - Mean
+  - Standard deviation
+  - 98th percentile
+- The average of bootstrap statistics is compared with population values
+
+---
+
+## 6. STATISTICAL METHODS USED
+
+- Random sampling (without replacement)
+- Percentile calculation
+- Bootstrap sampling (with replacement)
+- Mean and standard deviation computation
+- Data visualization using bar charts and histograms
+
+---
+
+## 7. NOTES
+
+- A random seed is used to ensure reproducibility of results
+- The dataset is treated as a full population
+- Sample statistics may differ from population values due to sampling variability
+- Bootstrap sampling helps provide stable estimates of population statistics
